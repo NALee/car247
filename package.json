@@ -1,0 +1,27 @@
+{
+    "name": "car247",
+    "version": "1.0.0",
+    "description": "Example boilerplate application for AngularJS + Sails.js with separated back- and frontend.",
+    "keywords": [
+        "sails.js",
+        "backend",
+        "REST",
+        "API",
+        "JWT",
+        "JSON Web Token",
+        "Passport.js",
+        "frontend",
+        "angular",
+        "slush",
+        "slush-angular"
+    ],
+    "main": "",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "start": "(cd backend && sails lift) & (cd frontend && gulp serve)",
+        "test": "cd backend && mocha"
+    },
+    "author": "NALee",
+    "license": "MIT"
+}
