@@ -213,7 +213,7 @@ gulp.task('production', g.serve({
  */
 gulp.task('serve', ['watch']);
 
-gulp.task('watch', ['statics', 'default'], function() {
+gulp.task('watch', ['statics', 'build-all'], function() {
   isWatching = true;
 
   // Initiate livereload server:
