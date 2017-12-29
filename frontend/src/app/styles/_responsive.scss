@@ -1,0 +1,458 @@
+/* Vilnius - Car Repair HTML Template */
+
+@media only screen and (max-width: 1350px){
+	.page-wrapper{
+		overflow:hidden;	
+	}
+	
+	.products-section .owl-theme .owl-controls{
+		display:none;
+	}
+	
+	.shop-section .owl-theme .owl-controls .owl-nav [class*="owl-prev"]{
+		left:-50px;	
+	}
+	
+	.shop-section .owl-theme .owl-controls .owl-nav [class*="owl-next"]{
+		right:-50px;	
+	}
+}
+
+@media only screen and (max-width: 1140px){
+	
+	.header-style-two.light-version{
+		position:relative;	
+	}
+	
+	.header-style-two.light-version .header-upper{
+		background:#222222;	
+	}
+	
+	.header-style-one .header-upper .logo-outer,
+	.header-style-two .header-upper .logo-outer{
+		width:100%;
+		text-align:center;
+		margin-bottom:20px;
+	}
+	
+	.header-style-one .header-upper .upper-right,
+	.header-style-two .header-upper .upper-right{
+		width:100%;
+		text-align:center;
+	}
+	
+	.header-style-one .header-upper .main-menu,
+	.header-style-one .header-lower .main-menu,
+	.header-style-two .header-upper .main-menu,
+	.header-style-two .header-lower .main-menu{
+		display:none;
+	}
+	
+	.main-header .info-box{
+		margin:0px 15px 10px;
+		float:none;
+		text-align:left;
+		display:inline-block;
+		width:auto;
+	}
+	
+	.main-header .upper-right .btn-box{
+		top:-15px;	
+	}
+	
+	.header-style-one .nav-outer{
+		padding:0px 0px;	
+	}
+	
+	.header-style-two .nav-outer,
+	.header-style-two.light-version .nav-outer{
+		padding:0px 0px 20px;	
+	}
+	
+	.header-style-two .nav-outer .nav-toggler {
+		display:block;	
+	}
+	
+	.header-style-one .nav-outer .search-box,
+	.main-header .nav-outer .other-options,
+	.header-style-two.light-version .nav-outer .btn-outer{
+		position:relative;
+		float:left;
+		right:0px;
+		top:0px;
+		left:0px;
+		margin:0px;
+		bottom:0px;	
+	}
+	
+	.main-header .nav-outer .other-options{
+		top:15px;	
+	}
+	
+	.main-header .nav-outer .search-box-btn{
+		text-align:left;
+		width:40px;	
+	}
+	
+	.header-style-one .nav-outer .nav-toggler,
+	.header-style-two .nav-outer .nav-toggler{
+		position:relative;
+		display:block;
+		float:right;
+		margin:0px;
+		right:0px;
+		top:0px;
+		left:0px;
+		font-size:16px;
+		bottom:0px;
+	}
+	
+	.header-style-one .nav-outer .nav-toggler button{
+		font-size:16px;
+	}
+	
+	.header-style-two .search-box-outer .dropdown-menu{
+		right:auto;
+		left:0px;
+		top:43px;
+		width:260px;	
+	}
+	
+	.facts-list li .inner-box .icon{
+		right:5px;	
+	}
+	
+	.services-section .image-container{
+		top:0px;
+		margin-bottom:40px;	
+	}
+	
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	
+	.sticky-header{
+		display:none;	
+	}
+	
+	.footer-style-two .widgets-box{
+		padding-left:0px;
+		padding-bottom:50px;	
+	}
+	
+	.footer-style-two .widgets-box .floated-image{
+		display:none;	
+	}
+	
+	.footer-style-three .footer-nav,
+	.footer-style-three .copyright-text{
+		width:100%;
+		text-align:center;
+	}
+	
+	.footer-style-three .footer-nav ul li{
+		float:none;
+		display:inline-block;
+		margin:0px 10px 5px;	
+	}
+	
+	.main-footer .contact-info li{
+		margin-bottom:10px;	
+	}
+	
+	.blog-sidebar{
+		padding:0px;	
+	}
+}
+
+@media only screen and (max-width: 767px){
+	
+	.main-header .header-top-one .top-left,
+	.main-header .header-top-one .top-right{
+		width:100%;
+		text-align:center;
+		padding:8px 0px;
+	}
+	
+	.main-header .header-top-two .top-left,
+	.main-header .header-top-two .top-right{
+		width:100%;
+		text-align:center;
+	}
+	
+	.main-header .header-top-two .top-right{
+		display:none;	
+	}
+	
+	.main-header .header-top-one .top-left ul li,
+	.main-header .header-top-one .top-right ul li{
+		float:none;
+		display:inline-block;
+		margin:0px 10px;	
+	}
+	
+	.main-header .header-top-two .top-left ul li,
+	.main-header .header-top-two .top-right ul li{
+		float:none;
+		display:inline-block;
+		margin:0px 10px;
+	}
+	
+	.main-header .header-top-two .top-left .social-links li{
+		margin:0px 5px;	
+	}
+	
+	.main-header .header-top-one .top-left ul li:after{
+		display:none;	
+	}
+	
+	.main-header .header-upper .info-box {
+		display: block;
+		width:100%;
+		text-align:center;
+		padding:10px;
+		max-width:none;
+	}
+	
+	.main-header .info-box .icon-box{
+		position:relative;
+		display:block;
+		top:0px;
+		margin:0 auto 15px;	
+	}
+	
+	.main-header .upper-right .btn-box{
+		top:0px;	
+	}
+	
+	.main-slider,
+	.page-title{
+		margin-top:0px !important;	
+	}
+	
+	.main-slider .tp-caption{
+		display:none !important;	
+	}
+	
+	.page-title h1{
+		font-size:24px;	
+	}
+	
+	.sec-title h2{
+		font-size:18px;	
+	}
+	
+	.facts-list li{
+		border:none;
+		text-align:center;	
+	}
+	
+	.facts-list li .inner-box{
+		padding:90px 0px 20px;
+		text-align:center;	
+	}
+	
+	.facts-list li .inner-box .icon{
+		top:20px;
+		right:50%;
+		margin-right:-20px;
+		width:40px;	
+	}
+	
+	.servic-box-one .inner-box,
+	.servic-box-two .inner-box{
+		padding-left:0px;
+		padding-right:0px;
+		text-align:center;	
+	}
+	
+	.service-box-three .inner-box{
+		padding:30px 20px;
+		text-align:center;	
+	}
+	
+	.servic-box-one .inner-box .icon-box,
+	.servic-box-two .inner-box .icon-box,
+	.service-box-three .inner-box .icon-box{
+		position:relative;
+		left:0px;
+		top:0px;
+		right:0px;
+		bottom:0px;
+		margin:0px auto 20px;	
+	}
+	
+	.main-footer .copyright-text,
+	.main-footer .logo,
+	.footer-style-one .social-links-one{
+		width:100%;
+		text-align:center;	
+	}
+	
+	.boxed-form-one{
+		padding-left:20px;
+		padding-right:20px;	
+	}
+	
+	.cart-section .cart-options .pull-left,
+	.cart-section .cart-options .pull-right,
+	.cart-section .apply-coupon .form-group input[type="text"]{
+		width:100%;
+		text-align:center;	
+	}
+	
+	.cart-section .apply-coupon .form-group,
+	.cart-section .cart-options .theme-btn{
+		width:100%;
+		margin:0px 0px 10px !important;	
+	}
+	
+}
+
+@media only screen and (max-width: 599px){
+	
+	.header-style-one .nav-outer .search-box{
+		width:220px;	
+	}
+	
+	.main-header .header-top-one .top-left,
+	.main-header .header-top-one .top-right,
+	.main-header .header-top-two .top-left,
+	.main-header .header-top-two .top-right{
+		width:100%;
+		text-align:center;
+	}
+	
+	.post-author .inner{
+		padding-left:0px;	
+	}
+	
+	.post-author .author-image{
+		position:relative;
+		left:0px;
+		top:0px;
+		margin-bottom:20px;	
+	}
+	
+	.comments-area .comment,
+	.comments-area .reply-comment,
+	.comments-area .comment .comment-inner{
+		padding-left:0px;
+		padding-right:0px;
+		margin-left:0px;	
+	}
+	
+	.sidebar-page-container .comments-area .comment-box .author-thumb{
+		position:relative;
+		top:0px;
+		left:0px;
+		margin-bottom:20px;	
+	}
+	
+	
+	.prod-tabs .reviews-container .review-box{
+		padding-left:0px;	
+	}
+	
+	.prod-tabs .reviews-container .rev-thumb{
+		position:relative;
+		margin-bottom:20px;
+	}
+	
+	.prod-tabs .reviews-container .rev-header h4,
+	.prod-tabs .reviews-container .rev-header .rating,
+	.prod-tabs .reviews-container .rev-header .time{
+		width:100%;
+		margin:0px 0px 10px;	
+	}
+	
+	.prod-tabs .tab-btns .tab-btn{
+		width:100%;
+		margin:0px 0px 10px;
+		text-align:center;
+	}
+	
+	.testimonials-section-one .slide-item .content-box {
+		padding-left:0px;
+		text-align:center;	
+	}
+	
+	.testimonials-section-one .slide-item .content-box:before{
+		display:none;	
+	}
+	
+	.testimonials-section-one .slide-item .author-thumb {
+		position:relative;
+		left:0px;
+		top:0px;
+		margin:0 auto 30px;	
+	}
+	
+	.main-footer .copyright-text,
+	.main-footer .logo{
+		width:100%;
+		text-align:center;	
+	}
+	
+	.tabs-style-one .tab-buttons .tab-btn{
+		width:100%;
+		margin:0px 0px 3px;
+	}
+	
+	.page-info .links-outer,
+	.page-info .breadcrumb-outer{
+		width:100%;	
+	}
+	
+	.page-info .social-links-one a{
+		margin-left:0px;
+		margin-right:12px;	
+	}
+	
+	.news-style-one .inner-box .lower-content blockquote{
+		padding:30px 20px;	
+	}
+	
+	.news-style-one .inner-box .lower-content{
+		padding:20px 20px 20px;	
+	}
+	
+	.news-style-one .inner-box .date{
+		left:20px;
+		bottom:0px;	
+	}
+	
+	.news-style-one .inner-box .post-meta ul{
+		width:100%;	
+	}
+	
+	.news-style-one .inner-box .post-meta .read-more{
+		float:left;	
+	}
+	
+}
+
+@media only screen and (max-width: 499px) {
+	
+	.main-header .header-upper .info-box {	
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+	}
+	
+	.gallery-section .filters li {
+		display:block;
+		width:100%;
+		margin:0px 0px 20px;	
+	}
+	
+}

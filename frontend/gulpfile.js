@@ -13,6 +13,7 @@ var stylish = require('jshint-stylish');
 var bower = require('./bower');
 var mainBowerFiles = require('main-bower-files');
 var historyApiFallback = require('connect-history-api-fallback');
+var livereload = require('gulp-livereload');
 var isWatching = false;
 
 var htmlminOpts = {
@@ -218,6 +219,7 @@ gulp.task('watch', ['statics', 'build-all'], function() {
 
   // Initiate livereload server:
   g.livereload();
+  livereload({ start: true });
 
   gulp.watch('./src/app/**/*.js', ['jshint']).on('change', function(evt) {
     if (evt.type !== 'changed') {
