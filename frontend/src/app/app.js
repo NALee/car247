@@ -11,6 +11,7 @@
     'frontend-templates',
     'frontend.core',
     'frontend.examples',
+    'frontend.carexp',
     'frontend.admin'
   ]);
 
@@ -108,8 +109,8 @@
           })
         ;
 
-        // For any unmatched url, redirect to /about
-        $urlRouterProvider.otherwise('/about');
+        // For any unmatched url, redirect to /carexp
+        $urlRouterProvider.otherwise('/carexp');
       }
     ])
   ;
@@ -135,13 +136,13 @@
          * Route state change start event, this is needed for following:
          *  1) Check if user is authenticated to access page, and if not redirect user back to login page
          */
-        $rootScope.$on('$stateChangeStart', function stateChangeStart(event, toState) {
-          if (!AuthService.authorize(toState.data.access)) {
-            event.preventDefault();
+        // $rootScope.$on('$stateChangeStart', function stateChangeStart(event, toState) {
+        //   if (!AuthService.authorize(toState.data.access)) {
+        //     event.preventDefault();
 
-            $state.go('auth.login');
-          }
-        });
+        //     $state.go('auth.login');
+        //   }
+        // });
 
         // Check for state change errors.
         $rootScope.$on('$stateChangeError', function stateChangeError(event, toState, toParams, fromState, fromParams, error) {

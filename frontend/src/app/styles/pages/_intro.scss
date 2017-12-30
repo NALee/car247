@@ -1,0 +1,56 @@
+.intro-tabs-box {
+    .tab-content {
+        position: relative;
+        background: #ffffff;
+        padding: 45px 35px 50px;
+        .content-box {
+            h3 {
+                position: relative;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1.4em;
+                font-size: 16px;
+                color: #333333;
+            }
+            a:hover, a:focus, a:visited {
+                text-decoration: none;
+                outline: none;
+            }
+            a:focus {
+                outline-offset: -2px;
+            }
+            a:focus, a:hover {
+                color: #23527c;
+            }
+            a:active, a:hover {
+                outline: 0;
+            }
+            .text {
+                position: relative;
+                margin-bottom: 25px;
+                line-height: 1.7em;
+            }
+            .btn-style-one {
+                position: relative;
+                padding: 8px 35px 6px;
+                line-height: 24px;
+                text-transform: uppercase;
+                background: #f06529;
+                color: #ffffff;
+                border: 2px solid #f06529;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-weight: 800;
+                border-radius: 3px;
+            }
+            .btn-style-one:hover {
+                background: none;
+                color: #f06529;
+            }
+            .theme-btn {
+                display: inline-block;
+            }
+        }
+    }
+}
