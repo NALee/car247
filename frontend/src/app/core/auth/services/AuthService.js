@@ -102,6 +102,17 @@
             ;
           },
 
+          signup: function signup(credentials) {
+            return $http
+              .post(BackendConfig.url + '/signup', credentials, {withCredentials: true})
+              .then(
+                function(response) {
+                  MessageService.success('You have been signup in.');
+                }
+              )
+            ;
+          },
+
           /**
            * The backend doesn't care about actual user logout, just delete the token
            * and you're good to go.

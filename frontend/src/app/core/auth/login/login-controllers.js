@@ -19,10 +19,10 @@
    */
   angular.module('frontend.core.auth.login')
     .controller('LoginController', [
-      '$scope', '$state',
+      '$scope', '$state', 'MessageService',
       'AuthService', 'FocusOnService',
       function controller(
-        $scope, $state,
+        $scope, $state, MessageService,
         AuthService, FocusOnService
       ) {
         // Already authenticated so redirect back to books list
@@ -38,6 +38,19 @@
               function successCallback() {
                 $state.go('examples.books');
               },
+              function errorCallback() {
+                _reset();
+              }
+            )
+          ;
+        };
+
+        // Scope function to perform actual signup request to server
+        $scope.signup = function signup() {
+          AuthService
+            .signup($scope.credentials)
+            .then(
+              MessageService.success('You have been signup in.'),
               function errorCallback() {
                 _reset();
               }

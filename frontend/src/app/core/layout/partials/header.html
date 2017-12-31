@@ -30,8 +30,8 @@
                     
 
                     <!-- Login Button -->
-                    <div class="login-button">
-                        <a href="#"><span>Login</span></a>
+                    <div class="login-button" ng-hide="isLoggedIn">
+                        <a href="#" ng-click="login()"><span>Login</span></a>
                     </div>
                     
                 </div>
@@ -39,166 +39,172 @@
         </div>
     </div>
     
-    <div ng-show="">
-        <!--Header-Lower-->
-        <div class="header-lower">
-            
-            <div class="auto-container">
-                <div class="nav-outer clearfix">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->    	
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-                                <li class="current home dropdown"><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="index.html">Homepage One</a></li>
-                                        <li><a href="index-2.html">Homepage Two</a></li>
-                                        <li><a href="index-3.html">Homepage Three</a></li>
-                                        <li class="dropdown"><a href="#">Header Styles</a>
-                                            <ul>
-                                                <li><a href="index.html">Header Style One</a></li>
-                                                <li><a href="index-2.html">Header Style Two</a></li>
-                                                <li><a href="index-3.html">Header Style Three</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li class="dropdown"><a href="#">Services</a>
-                                    <ul>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="service-single.html">Engine Upgrade</a></li>
-                                        <li><a href="service-single.html">Brake Checkup</a></li>
-                                        <li><a href="service-single.html">Car Inspection</a></li>
-                                        <li><a href="service-single.html">Battery Restore</a></li>
-                                        <li><a href="service-single.html">Suspension Services</a></li>
-                                        <li><a href="service-single.html">Gear Testing</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="gallery.html">Our Gallery</a></li>
-                                <li class="dropdown"><a href="#">Our Shop</a>
-                                    <ul>
-                                        <li><a href="shop.html">Our Shop</a></li>
-                                        <li><a href="shop-single.html">Single Item</a></li>
-                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
-                                        <li><a href="blog-list.html">Blog List View</a></li>
-                                        <li><a href="blog-single.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </nav><!-- Main Menu End-->
-                    
-                    <!--Social Links-->
-                    <div class="search-box">
-                        <form method="post" action="blog.html">
-                            <div class="form-group">
-                                <input type="search" name="search-field" value="" placeholder="Search the Blog">
-                                <button type="submit"><span class="icon fa fa-search"></span></button>
-                            </div>
-                        </form>
+    <!--Header-Lower-->
+    <div class="header-lower" ng-show="isLoggedIn">
+        
+        <div class="auto-container">
+            <div class="nav-outer clearfix">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->    	
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
                     </div>
                     
-                    <!-- Hidden Nav Toggler -->
-                    <div class="nav-toggler">
-                        <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
-                    </div><!-- / Hidden Nav Toggler -->
-                    
-                </div>
-            </div>
-        </div>
-        
-        
-        <!--Sticky Header-->
-        <div class="sticky-header">
-            <div class="auto-container clearfix">
-                <!--Logo-->
-                <div class="logo pull-left">
-                    <a href="index.html" class="img-responsive"><img src="../images/logo-small.png" alt="Vilnius" title="Vilnius"></a>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li class="current home dropdown"><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html">Homepage One</a></li>
+                                    <li><a href="index-2.html">Homepage Two</a></li>
+                                    <li><a href="index-3.html">Homepage Three</a></li>
+                                    <li class="dropdown"><a href="#">Header Styles</a>
+                                        <ul>
+                                            <li><a href="index.html">Header Style One</a></li>
+                                            <li><a href="index-2.html">Header Style Two</a></li>
+                                            <li><a href="index-3.html">Header Style Three</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown"><a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="service-single.html">Engine Upgrade</a></li>
+                                    <li><a href="service-single.html">Brake Checkup</a></li>
+                                    <li><a href="service-single.html">Car Inspection</a></li>
+                                    <li><a href="service-single.html">Battery Restore</a></li>
+                                    <li><a href="service-single.html">Suspension Services</a></li>
+                                    <li><a href="service-single.html">Gear Testing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html">Our Gallery</a></li>
+                            <li class="dropdown"><a href="#">Our Shop</a>
+                                <ul>
+                                    <li><a href="shop.html">Our Shop</a></li>
+                                    <li><a href="shop-single.html">Single Item</a></li>
+                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog</a>
+                                <ul>
+                                    <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                    <li><a href="blog-list.html">Blog List View</a></li>
+                                    <li><a href="blog-single.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- Main Menu End-->
+                
+                <!--Social Links-->
+                <div class="search-box">
+                    <form method="post" action="blog.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value="" placeholder="Search the Blog">
+                            <button type="submit"><span class="icon fa fa-search"></span></button>
+                        </div>
+                    </form>
                 </div>
                 
-                <!--Right Col-->
-                <div class="right-col pull-right">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->    	
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="index.html">Homepage One</a></li>
-                                        <li><a href="index-2.html">Homepage Two</a></li>
-                                        <li><a href="index-3.html">Homepage Three</a></li>
-                                        <li class="dropdown"><a href="#">Header Styles</a>
-                                            <ul>
-                                                <li><a href="index.html">Header Style One</a></li>
-                                                <li><a href="index-2.html">Header Style Two</a></li>
-                                                <li><a href="index-3.html">Header Style Three</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li class="dropdown"><a href="#">Services</a>
-                                    <ul>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="service-single.html">Engine Upgrade</a></li>
-                                        <li><a href="service-single.html">Brake Checkup</a></li>
-                                        <li><a href="service-single.html">Car Inspection</a></li>
-                                        <li><a href="service-single.html">Battery Restore</a></li>
-                                        <li><a href="service-single.html">Suspension Services</a></li>
-                                        <li><a href="service-single.html">Gear Testing</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="gallery.html">Our Gallery</a></li>
-                                <li class="dropdown"><a href="#">Our Shop</a>
-                                    <ul>
-                                        <li><a href="shop.html">Our Shop</a></li>
-                                        <li><a href="shop-single.html">Single Item</a></li>
-                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="blog-grid.html">Blog Grid View</a></li>
-                                        <li><a href="blog-list.html">Blog List View</a></li>
-                                        <li><a href="blog-single.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </nav><!-- Main Menu End-->
-                </div>
+                <!-- Hidden Nav Toggler -->
+                <div class="nav-toggler">
+                    <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
+                </div><!-- / Hidden Nav Toggler -->
                 
             </div>
         </div>
-        <!--End Sticky Header-->
     </div>
+    
+    
+    <!--Sticky Header-->
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a href="index.html" class="img-responsive"><img src="../images/logo-small.png" alt="Vilnius" title="Vilnius"></a>
+            </div>
+            
+            <!--Right Col-->
+            <div class="right-col pull-right" ng-show="isLoggedIn">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->    	
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li class="current dropdown"><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html">Homepage One</a></li>
+                                    <li><a href="index-2.html">Homepage Two</a></li>
+                                    <li><a href="index-3.html">Homepage Three</a></li>
+                                    <li class="dropdown"><a href="#">Header Styles</a>
+                                        <ul>
+                                            <li><a href="index.html">Header Style One</a></li>
+                                            <li><a href="index-2.html">Header Style Two</a></li>
+                                            <li><a href="index-3.html">Header Style Three</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="dropdown"><a href="#">Services</a>
+                                <ul>
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="service-single.html">Engine Upgrade</a></li>
+                                    <li><a href="service-single.html">Brake Checkup</a></li>
+                                    <li><a href="service-single.html">Car Inspection</a></li>
+                                    <li><a href="service-single.html">Battery Restore</a></li>
+                                    <li><a href="service-single.html">Suspension Services</a></li>
+                                    <li><a href="service-single.html">Gear Testing</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html">Our Gallery</a></li>
+                            <li class="dropdown"><a href="#">Our Shop</a>
+                                <ul>
+                                    <li><a href="shop.html">Our Shop</a></li>
+                                    <li><a href="shop-single.html">Single Item</a></li>
+                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Blog</a>
+                                <ul>
+                                    <li><a href="blog-grid.html">Blog Grid View</a></li>
+                                    <li><a href="blog-list.html">Blog List View</a></li>
+                                    <li><a href="blog-single.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- Main Menu End-->
+            </div>
+
+            <div class="right-col pull-right" ng-hide="isLoggedIn" style="margin-top: 13px;">
+                <span class="login-sticky-header-text">Please login for full access!!</span>
+                <!-- Login Button -->
+                <div class="login-button">
+                    <a href="#" ng-click="login()"><span>Login</span></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--End Sticky Header-->
 
 </header>

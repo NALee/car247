@@ -96,6 +96,40 @@ var AuthController = {
     });
   },
 
+  signup: function signup(request, response) {console.log(request.body)
+    sails.models.user.create({
+      "username": request.body.identifier,
+      "email": request.body.email,
+      "firstName": "nalee",
+      "lastName": "nalee",
+      "admin": false,
+      "createdUser": 1,
+      "updatedUser": 1
+    })
+    .exec(function callback(error, record) {
+      if (error) {
+        sails.log.error(__filename + ':' + __line + ' [Failed to write user login data to database]');
+        sails.log.error(error);
+      } else {
+        sails.models.passport.create({
+          "protocol": "local",
+          "password": request.body.password,
+          "user": record.id
+        })
+        .exec(function callback(error, result) {
+          // If a passport wasn't created, bail out
+          if (error) {
+            response.json(401, error);
+          } else {
+            response.ok(200, {
+              status: 'signup access'
+            });
+          }
+        })
+      }
+    })
+  },
+
   /**
    * Action to check if given password is same as current user password. Note that
    * this action is only allowed authenticated users. And by default given password

@@ -3,7 +3,8 @@
   
     // Define module
     angular.module('frontend.carexp', [
-      'frontend.carexp.intro'
+      'frontend.carexp.intro',
+      'frontend.carexp.home'
     ]);
   
     // Module configuration
