@@ -27,35 +27,11 @@
         $scope.user = UserService.user;
         $scope.auth = AuthService;
         $scope.navigationItems = HeaderNavigationItems;
+        
+        $scope.isLoggedIn = $scope.auth.isAuthenticated();
 
-        /**
-         * Helper function to determine if menu item needs 'not-active' class or not. This is basically
-         * special case because of 'examples.about' state.
-         *
-         * @param   {layout.menuItem}   item    Menu item object
-         *
-         * @returns {boolean}
-         */
-        $scope.isNotActive = function isNotActive(item) {
-          return !!(item.state === 'examples' && $state.current.name === 'examples.about');
-        };
-
-        /**
-         * Helper function to determine if specified menu item needs 'active' class or not. This is needed
-         * because of reload of page, in this case top level navigation items are not activated without
-         * this helper.
-         *
-         * @param   {layout.menuItem}   item    Menu item object
-         *
-         * @returns {boolean}
-         */
-        $scope.isActive = function isActive(item) {
-          var bits = $state.current.name.toString().split('.');
-
-          return !!(
-            (item.state === $state.current.name) ||
-            (item.state === bits[0] && $state.current.name !== 'examples.about')
-          );
+        $scope.login = function() {
+          $state.go('auth.login')
         };
 
         // Simple helper function which triggers user logout action.

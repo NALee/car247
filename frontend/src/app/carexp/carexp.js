@@ -3,7 +3,8 @@
   
     // Define module
     angular.module('frontend.carexp', [
-      'frontend.carexp.intro'
+      'frontend.carexp.intro',
+      'frontend.carexp.home'
     ]);
   
     // Module configuration
@@ -25,7 +26,7 @@
         function($rootScope, $state, $timeout, UserService, AuthService) {
 
             if (AuthService.isAuthenticated()) {
-                $state.go('carexp.home')
+                // $state.go('carexp.home')
             } else {
                 $state.go('carexp.intro');
             }

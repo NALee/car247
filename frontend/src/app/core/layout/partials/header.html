@@ -5,12 +5,11 @@
         <div class="auto-container">
             <div class="clearfix">
                 
-                <div class="logo-outer">
+                <div class="col-md-3 logo-outer">
                     <div class="logo"><a href="index.html"><img src="../images/logo.png" alt="Vilnius" title="Vilnius"></a></div>
                 </div>
                 
-                <div class="upper-right clearfix">
-                    
+                <div class="col-md-9 upper-right clearfix">
                     <!--Info Box-->
                     <div class="info-box">
                         <div class="icon-box"><span class="flaticon-clock-1"></span></div>
@@ -19,9 +18,9 @@
                             <li>Mon - Sat:  8.30am to 9.00pm</li>
                         </ul>
                     </div>
-                    
+                
                     <!--Info Box-->
-                    <div class="info-box">
+                    <div class="info-box" style="margin-right: 70px;">
                         <div class="icon-box"><span class="flaticon-support"></span></div>
                         <ul>
                             <li><strong>HELPLINE</strong></li>
@@ -29,19 +28,19 @@
                         </ul>
                     </div>
                     
-                    <div class="info-box btn-box">
-                        <a href="contact.html" class="theme-btn">Get a Quote &ensp;<span class="fa fa-angle-right"></span></a>
+
+                    <!-- Login Button -->
+                    <div class="login-button" ng-hide="isLoggedIn">
+                        <a href="#" ng-click="login()"><span>Login</span></a>
                     </div>
                     
                 </div>
-                
             </div>
         </div>
     </div>
     
-    
     <!--Header-Lower-->
-    <div class="header-lower">
+    <div class="header-lower" ng-show="isLoggedIn">
         
         <div class="auto-container">
             <div class="nav-outer clearfix">
@@ -134,7 +133,7 @@
             </div>
             
             <!--Right Col-->
-            <div class="right-col pull-right">
+            <div class="right-col pull-right" ng-show="isLoggedIn">
                 <!-- Main Menu -->
                 <nav class="main-menu">
                     <div class="navbar-header">
@@ -195,8 +194,17 @@
                     </div>
                 </nav><!-- Main Menu End-->
             </div>
+
+            <div class="right-col pull-right" ng-hide="isLoggedIn" style="margin-top: 13px;">
+                <span class="login-sticky-header-text">Please login for full access!!</span>
+                <!-- Login Button -->
+                <div class="login-button">
+                    <a href="#" ng-click="login()"><span>Login</span></a>
+                </div>
+            </div>
             
         </div>
-    </div><!--End Sticky Header-->
+    </div>
+    <!--End Sticky Header-->
 
 </header>

@@ -21,7 +21,6 @@
         $stateProvider
           .state('auth', {
             abstract: true,
-            parent: 'frontend',
             data: {
               access: 1
             }
