@@ -15,7 +15,7 @@
       function($stateProvider) {
         $stateProvider
           .state('examples.about', {
-            url: '/about',
+            url: '/about7',
             data: {
               access: 0
             },

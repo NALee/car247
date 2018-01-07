@@ -16,11 +16,11 @@
    */
   angular.module('frontend.core.layout')
     .controller('HeaderController', [
-      '$scope', '$state',
+      '$scope', '$rootScope', '$state',
       'HeaderNavigationItems',
       'UserService', 'AuthService',
       function controller(
-        $scope, $state,
+        $scope, $rootScope, $state,
         HeaderNavigationItems,
         UserService, AuthService
       ) {
@@ -30,6 +30,44 @@
         
         $scope.isLoggedIn = $scope.auth.isAuthenticated();
 
+        $rootScope.tabItems = [
+          {
+            name: 'Home',
+            address: 'home',
+            active: true
+          },
+          {
+            name: 'About Us',
+            address: 'about',
+            active: false
+          },
+          {
+            name: 'Services',
+            address: 'services',
+            active: false
+          },
+          {
+            name: 'Our Gallery',
+            address: 'gallery',
+            active: false
+          },
+          {
+            name: 'Our Shop',
+            address: 'shop',
+            active: false
+          },
+          {
+            name: 'Blog',
+            address: 'blog',
+            active: false
+          },
+          {
+            name: 'Contact Us',
+            address: 'contact',
+            active: false
+          }
+        ];
+
         $scope.login = function() {
           $state.go('auth.login')
         };
@@ -37,6 +75,17 @@
         // Simple helper function which triggers user logout action.
         $scope.logout = function logout() {
           AuthService.logout();
+        };
+
+        $scope.goTo = function(tab) {
+          var currentPage = $rootScope.tabItems.filter(function(item) {
+            return item.active;
+          })
+          var page = 'carexp.' + tab.address;
+
+          currentPage[0].active = false;
+          tab.active = true;
+          $state.go(page)
         };
       }
     ])

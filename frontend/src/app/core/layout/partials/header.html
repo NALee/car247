@@ -57,49 +57,9 @@
                     
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="current home dropdown"><a href="#">Home</a>
-                                <ul>
-                                    <li><a href="index.html">Homepage One</a></li>
-                                    <li><a href="index-2.html">Homepage Two</a></li>
-                                    <li><a href="index-3.html">Homepage Three</a></li>
-                                    <li class="dropdown"><a href="#">Header Styles</a>
-                                        <ul>
-                                            <li><a href="index.html">Header Style One</a></li>
-                                            <li><a href="index-2.html">Header Style Two</a></li>
-                                            <li><a href="index-3.html">Header Style Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                            <li ng-repeat="item in tabItems" ng-class="{current: item.active, home: item.address === 'home'}">
+                                <a href="#" ng-click="goTo(item)">{{item.name}}</a>
                             </li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li class="dropdown"><a href="#">Services</a>
-                                <ul>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="service-single.html">Engine Upgrade</a></li>
-                                    <li><a href="service-single.html">Brake Checkup</a></li>
-                                    <li><a href="service-single.html">Car Inspection</a></li>
-                                    <li><a href="service-single.html">Battery Restore</a></li>
-                                    <li><a href="service-single.html">Suspension Services</a></li>
-                                    <li><a href="service-single.html">Gear Testing</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.html">Our Gallery</a></li>
-                            <li class="dropdown"><a href="#">Our Shop</a>
-                                <ul>
-                                    <li><a href="shop.html">Our Shop</a></li>
-                                    <li><a href="shop-single.html">Single Item</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#">Blog</a>
-                                <ul>
-                                    <li><a href="blog-grid.html">Blog Grid View</a></li>
-                                    <li><a href="blog-list.html">Blog List View</a></li>
-                                    <li><a href="blog-single.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav><!-- Main Menu End-->

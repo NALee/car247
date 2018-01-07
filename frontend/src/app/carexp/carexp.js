@@ -4,7 +4,13 @@
     // Define module
     angular.module('frontend.carexp', [
       'frontend.carexp.intro',
-      'frontend.carexp.home'
+      'frontend.carexp.home',
+      'frontend.carexp.about',
+      'frontend.carexp.services',
+      'frontend.carexp.gallery',
+      'frontend.carexp.shop',
+      'frontend.carexp.blog',
+      'frontend.carexp.contact'
     ]);
   
     // Module configuration
@@ -25,10 +31,17 @@
       .run(['$rootScope', '$state', '$timeout', 'UserService', 'AuthService',
         function($rootScope, $state, $timeout, UserService, AuthService) {
 
-            if (AuthService.isAuthenticated()) {
-                // $state.go('carexp.home')
-            } else {
-                $state.go('carexp.intro');
+            if (!AuthService.isAuthenticated()) {
+              $state.go('carexp.intro');
+            }
+
+            $rootScope.goToHomePage = function() {
+              var currentPage = $rootScope.tabItems.filter(function(item) {
+                return item.active;
+              })
+              currentPage[0].active = false;
+              $rootScope.tabItems[0].active = true;
+              $state.go('carexp.home')
             }
 
             // $rootScope.initPage = function($scope) {
